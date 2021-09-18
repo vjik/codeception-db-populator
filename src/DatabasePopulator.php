@@ -130,9 +130,7 @@ final class DatabasePopulator
         if (!file_exists($file)) {
             throw new ModuleException(
                 Module::class,
-                "\nFile with dump doesn't exist.\n"
-                . 'Please, check path for SQL-file: '
-                . $file
+                "\nFile with dump doesn't exist.\nPlease, check path for SQL-file: $file"
             );
         }
 

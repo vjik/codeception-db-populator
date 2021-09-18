@@ -7,8 +7,8 @@ paths:
   envs: tests/_envs
   log: tests/_log
 actor_suffix: Tester
-#params:
-#  - tests/.env
+params:
+  - tests/.env
 settings:
   suite_class: \PHPUnit_Framework_TestSuite
   colors: true
