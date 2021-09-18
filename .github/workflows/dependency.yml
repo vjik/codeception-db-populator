@@ -46,4 +46,4 @@ jobs:
         run: composer require maglnet/composer-require-checker
 
       - name: Check dependency
-        run: vendor/bin/composer-require-checker
+        run: vendor/bin/composer-require-checker check --config-file=dependency-checker.json
