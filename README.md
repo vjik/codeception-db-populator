@@ -1,7 +1,5 @@
 <p align="center">
-    <a href="https://github.com/yiisoft" target="_blank">
-        <img src="https://vjik.github.io/codeception-db-populator/docs/codeception-logo.png" height="100">
-    </a>
+    <img src="docs/codeception-logo.png" height="100">
     <h1 align="center">Database Populator for Codeception DB Module</h1>
     <br>
 </p>
