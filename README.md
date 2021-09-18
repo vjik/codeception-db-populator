@@ -107,7 +107,7 @@ final class BlogTest extends Unit
 
 ## Actions
 
-### `loadDump`
+### `loadDump()`
 
 Load the specified dump(s) to database. Before loading the dump, the database is cleaned.
 
@@ -116,7 +116,7 @@ $I->loadDump('blog'); // load one dump
 $I->loadDump('blog', 'catalog'); // load several dumps
 ```
 
-### `loadRows`
+### `loadRows()`
 
 Load the specified row set(s) to database.
 
