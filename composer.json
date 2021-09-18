@@ -1,7 +1,7 @@
 {
     "name": "vjik/codeception-db-populator",
     "type": "library",
-    "description": "Database Populator for Codeception DB module",
+    "description": "Database populator for Codeception DB module",
     "keywords": [
         "codeception",
         "db"

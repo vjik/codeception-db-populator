@@ -1,16 +1,19 @@
-# Database Populator for Codeception DB module 
+# Database Populator for Codeception DB Module
 
 [![Latest Stable Version](https://poser.pugx.org/vjik/codeception-db-populator/v/stable.png)](https://packagist.org/packages/vjik/codeception-db-populator)
 [![Total Downloads](https://poser.pugx.org/vjik/codeception-db-populator/downloads.png)](https://packagist.org/packages/vjik/codeception-db-populator)
 [![Build status](https://github.com/vjik/codeception-db-populator/workflows/build/badge.svg)](https://github.com/vjik/codeception-db-populator/actions?query=workflow%3Abuild)
-[![Mutation testing badge](https://img.shields.io/endpoint?style=flat&url=https%3A%2F%2Fbadge-api.stryker-mutator.io%2Fgithub.com%2Fvjik%2Fcodeception-db-populator%2Fmaster)](https://dashboard.stryker-mutator.io/reports/github.com/vjik/codeception-db-populator/master)
 [![static analysis](https://github.com/vjik/codeception-db-populator/workflows/static%20analysis/badge.svg)](https://github.com/vjik/codeception-db-populator/actions?query=workflow%3A%22static+analysis%22)
+[![License](https://poser.pugx.org/vjik/codeception-db-populator/license)](/LICENSE)
 
-The package ...
+[Codeception](https://codeception.com/) DB module addon for handy populate database.
 
 ## Requirements
 
 - PHP 7.4 or higher.
+- `PDO` and `Filter` PHP extension.
+- Codeception 4.1 or higher.
+- Codeception Module DB 1.1 or higher.
 
 ## Installation
 
@@ -24,21 +27,19 @@ composer require vjik/codeception-db-populator --dev --prefer-dist
 
 ## Testing
 
-### Unit testing
+### Unit and integration testing
 
-The package is tested with [PHPUnit](https://phpunit.de/). To run tests:
+The package is tested with [Codeception](https://codeception.com/). For tests need MySQL database with configuration:
 
-```shell
-./vendor/bin/phpunit
-```
+- host: `127.0.0.1`
+- name: `db_test`
+- user: `root`
+- password: `root`
 
-### Mutation testing
-
-The package tests are checked with [Infection](https://infection.github.io/) mutation framework with
-[Infection Static Analysis Plugin](https://github.com/Roave/infection-static-analysis-plugin). To run it:
+To run tests:
 
 ```shell
-./vendor/bin/roave-infection-static-analysis-plugin
+./vendor/bin/codecept run
 ```
 
 ### Static analysis
@@ -51,5 +52,4 @@ The code is statically analyzed with [Psalm](https://psalm.dev/). To run static 
 
 ## License
 
-The codeception-db-populator is free software. It is released under the terms of the BSD License.
-Please see [`LICENSE`](./LICENSE.md) for more information.
+The Database Populator for Codeception DB Module is free software. It is released under the terms of the BSD License. Please see [`LICENSE`](./LICENSE.md) for more information.
