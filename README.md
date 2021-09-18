@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="docs/codeception-logo.png" height="100">
+    <img src="codeception-logo.png" height="100">
     <h1 align="center">Database Populator for Codeception DB Module</h1>
     <br>
 </p>
