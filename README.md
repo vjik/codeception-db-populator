@@ -1,10 +1,10 @@
-# _____
+# Database Populator for Codeception DB module 
 
-[![Latest Stable Version](https://poser.pugx.org/vjik/_____/v/stable.png)](https://packagist.org/packages/vjik/_____)
-[![Total Downloads](https://poser.pugx.org/vjik/_____/downloads.png)](https://packagist.org/packages/vjik/_____)
-[![Build status](https://github.com/vjik/_____/workflows/build/badge.svg)](https://github.com/vjik/_____/actions?query=workflow%3Abuild)
-[![Mutation testing badge](https://img.shields.io/endpoint?style=flat&url=https%3A%2F%2Fbadge-api.stryker-mutator.io%2Fgithub.com%2Fvjik%2F_____%2Fmaster)](https://dashboard.stryker-mutator.io/reports/github.com/vjik/_____/master)
-[![static analysis](https://github.com/vjik/_____/workflows/static%20analysis/badge.svg)](https://github.com/vjik/_____/actions?query=workflow%3A%22static+analysis%22)
+[![Latest Stable Version](https://poser.pugx.org/vjik/codeception-db-populator/v/stable.png)](https://packagist.org/packages/vjik/codeception-db-populator)
+[![Total Downloads](https://poser.pugx.org/vjik/codeception-db-populator/downloads.png)](https://packagist.org/packages/vjik/codeception-db-populator)
+[![Build status](https://github.com/vjik/codeception-db-populator/workflows/build/badge.svg)](https://github.com/vjik/codeception-db-populator/actions?query=workflow%3Abuild)
+[![Mutation testing badge](https://img.shields.io/endpoint?style=flat&url=https%3A%2F%2Fbadge-api.stryker-mutator.io%2Fgithub.com%2Fvjik%2Fcodeception-db-populator%2Fmaster)](https://dashboard.stryker-mutator.io/reports/github.com/vjik/codeception-db-populator/master)
+[![static analysis](https://github.com/vjik/codeception-db-populator/workflows/static%20analysis/badge.svg)](https://github.com/vjik/codeception-db-populator/actions?query=workflow%3A%22static+analysis%22)
 
 The package ...
 
@@ -17,7 +17,7 @@ The package ...
 The package could be installed with [composer](https://getcomposer.org/download/):
 
 ```shell
-composer require vjik/_____ --prefer-dist
+composer require vjik/codeception-db-populator --dev --prefer-dist
 ```
 
 ## General usage
@@ -51,5 +51,5 @@ The code is statically analyzed with [Psalm](https://psalm.dev/). To run static 
 
 ## License
 
-The _____ is free software. It is released under the terms of the BSD License.
+The codeception-db-populator is free software. It is released under the terms of the BSD License.
 Please see [`LICENSE`](./LICENSE.md) for more information.
