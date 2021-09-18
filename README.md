@@ -11,6 +11,7 @@
 [![License](https://poser.pugx.org/vjik/codeception-db-populator/license)](/LICENSE)
 
 [Codeception](https://codeception.com/) DB module addon for handy populate database.
+Load only the tables and data that are needed for the current test. This will allow you to create and run tests faster. 
 
 ## Requirements
 
