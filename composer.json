@@ -1,35 +1,37 @@
 {
-    "name": "vjik/_____",
+    "name": "vjik/codeception-db-populator",
     "type": "library",
-    "description": "_____",
+    "description": "Database Populator for Codeception DB module",
     "keywords": [
-        "_____"
+        "codeception",
+        "db"
     ],
     "license": "BSD-3-Clause",
     "support": {
-        "issues": "https://github.com/vjik/_____/issues?state=open",
-        "source": "https://github.com/vjik/_____"
+        "issues": "https://github.com/vjik/codeception-db-populator/issues?state=open",
+        "source": "https://github.com/vjik/codeception-db-populator"
     },
     "minimum-stability": "stable",
     "require": {
-        "php": "^7.4|^8.0"
+        "php": "^7.4|^8.0",
+        "ext-pdo": "*",
+        "codeception/codeception": "^4.1",
+        "codeception/module-db": "^1.1"
     },
     "require-dev": {
         "phpunit/phpunit": "^9.5",
-        "roave/infection-static-analysis-plugin": "^1.6",
-        "vimeo/psalm": "^4.3"
+        "roave/infection-static-analysis-plugin": "^1.9",
+        "vimeo/psalm": "^4.10"
     },
     "autoload": {
         "psr-4": {
-            "Vjik\\_____\\": "src"
+            "Vjik\\Codeception\\DatabasePopulator\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Vjik\\_____\\Tests\\": "tests"
+            "Vjik\\Codeception\\DatabasePopulator\\Tests\\": "tests"
         }
-    },
-    "scripts": {
     },
     "config": {
         "sort-packages": true
