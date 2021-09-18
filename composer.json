@@ -4,7 +4,8 @@
     "description": "Database populator for Codeception DB module",
     "keywords": [
         "codeception",
-        "db"
+        "db-testing",
+        "database-testing"
     ],
     "license": "BSD-3-Clause",
     "support": {
