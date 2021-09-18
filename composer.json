@@ -4,6 +4,7 @@
     "description": "Database populator for Codeception DB module",
     "keywords": [
         "codeception",
+        "codeception-module",
         "db-testing",
         "database-testing"
     ],
