@@ -1,0 +1,5 @@
+{
+    "symbol-whitelist" : [
+        "codecept_absolute_path"
+    ]
+}
