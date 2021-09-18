@@ -11,4 +11,3 @@ modules:
         rowsPath: 'tests/_data/rows'
         preloadDump: 'blog'
         preloadRows: 'authors'
-        mysqlDisableForeignKeyChecks: true

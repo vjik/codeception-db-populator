@@ -12,7 +12,6 @@ use function is_array;
  *     preloadRows: string|string[]|null,
  *     dumpsPath: string,
  *     rowsPath: string,
- *     mysqlDisableForeignKeyChecks: string|bool,
  * }
  */
 final class Module extends \Codeception\Module
@@ -25,7 +24,6 @@ final class Module extends \Codeception\Module
     protected $config = [
         'preloadDump' => null,
         'preloadRows' => null,
-        'mysqlDisableForeignKeyChecks' => false,
     ];
 
     /**

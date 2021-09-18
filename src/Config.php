@@ -13,7 +13,6 @@ final class Config
 {
     private string $dumpsPath;
     private string $rowsPath;
-    private bool $mysqlDisableForeignKeyChecks;
 
     /**
      * @psalm-param ModuleConfigArray $config
@@ -22,10 +21,6 @@ final class Config
     {
         $this->dumpsPath = codecept_absolute_path($config['dumpsPath']);
         $this->rowsPath = codecept_absolute_path($config['rowsPath']);
-        $this->mysqlDisableForeignKeyChecks = filter_var(
-            $config['mysqlDisableForeignKeyChecks'],
-            FILTER_VALIDATE_BOOLEAN
-        );
     }
 
     public function dumpsPath(): string
@@ -36,10 +31,5 @@ final class Config
     public function rowsPath(): string
     {
         return $this->rowsPath;
-    }
-
-    public function mysqlDisableForeignKeyChecks(): bool
-    {
-        return $this->mysqlDisableForeignKeyChecks;
     }
 }

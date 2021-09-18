@@ -104,18 +104,14 @@ final class DatabasePopulator
     private function beforeLoadRows(): void
     {
         if ($this->dbDriver instanceof MySqlDriver) {
-            if ($this->config->mysqlDisableForeignKeyChecks()) {
-                $this->dbh->prepare('SET FOREIGN_KEY_CHECKS = 0')->execute();
-            }
+            $this->dbh->prepare('SET FOREIGN_KEY_CHECKS = 0')->execute();
         }
     }
 
     private function afterLoadRows(): void
     {
         if ($this->dbDriver instanceof MySqlDriver) {
-            if ($this->config->mysqlDisableForeignKeyChecks()) {
-                $this->dbh->prepare('SET FOREIGN_KEY_CHECKS = 1')->execute();
-            }
+            $this->dbh->prepare('SET FOREIGN_KEY_CHECKS = 1')->execute();
         }
     }
 

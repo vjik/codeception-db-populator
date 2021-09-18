@@ -15,7 +15,7 @@
 ## Requirements
 
 - PHP 7.4 or higher.
-- `PDO` and `Filter` PHP extension.
+- `PDO` PHP extension.
 - Codeception 4.1 or higher.
 - Codeception Module DB 1.1 or higher.
 
@@ -41,7 +41,6 @@ modules:
     - Vjik\Codeception\DatabasePopulator\Module:
         dumpsPath: 'tests/_data/dumps'
         rowsPath: 'tests/_data/rows'
-        mysqlDisableForeignKeyChecks: true # recommended
 ```
 
 Create dumps and row sets.
@@ -66,16 +65,10 @@ tests/
 
 ## Configuration
 
-### Base options
-
 - `preloadDump` — dump(s) for preload before run suite.
 - `preloadRows` — row set(s) for preload before run suite.
 - `dumpsPath` (required) — relative path to directory with dumps (for example, `tests/_dump`).
 - `rowsPath` (required) — relative path to directory with row sets (for example, `tests/_rows`).
-
-### MySQL specified options
-
-- `mysqlDisableForeignKeyChecks` — disable check foreign key constraints for InnoDB tables. Default is `false`.
 
 ## Testing
 

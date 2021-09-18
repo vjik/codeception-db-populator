@@ -9,4 +9,3 @@ modules:
     - Vjik\Codeception\DatabasePopulator\Module:
         dumpsPath: 'tests/_data/dumps'
         rowsPath: 'tests/_data/rows'
-        mysqlDisableForeignKeyChecks: true

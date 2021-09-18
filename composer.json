@@ -15,7 +15,6 @@
     "minimum-stability": "stable",
     "require": {
         "php": "^7.4|^8.0",
-        "ext-filter": "*",
         "ext-pdo": "*",
         "codeception/codeception": "^4.1",
         "codeception/module-db": "^1.1"
