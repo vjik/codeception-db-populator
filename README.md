@@ -1,4 +1,10 @@
-# Database Populator for Codeception DB Module
+<p align="center">
+    <a href="https://github.com/yiisoft" target="_blank">
+        <img src="https://vjik.github.io/codeception-db-populator/docs/codeception-logo.png" height="100">
+    </a>
+    <h1 align="center">Database Populator for Codeception DB Module</h1>
+    <br>
+</p>
 
 [![Latest Stable Version](https://poser.pugx.org/vjik/codeception-db-populator/v/stable.png)](https://packagist.org/packages/vjik/codeception-db-populator)
 [![Total Downloads](https://poser.pugx.org/vjik/codeception-db-populator/downloads.png)](https://packagist.org/packages/vjik/codeception-db-populator)
@@ -24,6 +30,54 @@ composer require vjik/codeception-db-populator --dev --prefer-dist
 ```
 
 ## General usage
+
+Enable in suite module `Db` and `DatabasePopulatorAddon`:
+
+```yml
+modules:
+  enabled:
+    - Db:
+        dsn: 'mysql:host=%DB_HOST%;dbname=%DB_NAME%'
+        user: '%DB_USERNAME%'
+        password: '%DB_PASSWORD%'
+    - Vjik\Codeception\DatabasePopulator\Module:
+        dumpsPath: 'tests/_data/dumps'
+        rowsPath: 'tests/_data/rows'
+        mysqlDisableForeignKeyChecks: true # recommended
+```
+
+Create dumps and row sets.
+
+Row set format:
+
+Put files with dumps and row sets to dumps/rows paths:
+
+```
+tests/
+  _data/
+    dumps/
+      user-management.sql
+      blog.sql
+      catalog.sql
+    rows/
+      users.php
+      users-with-photos.php
+      blog-categories.php
+      posts-with-categories.php
+```
+
+## Configuration
+
+### Base options
+
+- `preloadDump` — dump(s) for preload before run suite.
+- `preloadRows` — row set(s) for preload before run suite.
+- `dumpsPath` (required) — relative path to directory with dumps (for example, `tests/_dump`).
+- `rowsPath` (required) — relative path to directory with row sets (for example, `tests/_rows`).
+
+### MySQL specified options
+
+- `mysqlDisableForeignKeyChecks` — disable check foreign key constraints for InnoDB tables. Default is `false`.
 
 ## Testing
 
