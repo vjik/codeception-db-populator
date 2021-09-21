@@ -10,8 +10,8 @@
 [![static analysis](https://github.com/vjik/codeception-db-populator/workflows/static%20analysis/badge.svg)](https://github.com/vjik/codeception-db-populator/actions?query=workflow%3A%22static+analysis%22)
 [![License](https://poser.pugx.org/vjik/codeception-db-populator/license)](/LICENSE)
 
-[Codeception](https://codeception.com/) DB module addon for handy populate database.
-Load only the tables and data that are needed for the current test. This will allow you to create and run tests faster. 
+[Codeception](https://codeception.com/) DB module addon that helps you to tune database populations. 
+So for a test you could load only needed tables or rows. As a result it dramatically reduces the total execution time.
 
 ## Requirements
 
@@ -28,7 +28,7 @@ composer require vjik/codeception-db-populator --dev --prefer-dist
 ```
 ## General usage
 
-Enable in suite module `Db` and `DatabasePopulator` addon:
+Enable module `Db` and `DatabasePopulator` addon in the suite:
 
 ```yml
 modules:
@@ -43,9 +43,9 @@ modules:
 ```
 
 Create SQL dumps that contains a record of the table structure and/or the data for use in tests.
-Put dumps to specified in options path (for example, `tests/_data/dumps`).
+Put dumps into path, specified in options (for example, `tests/_data/dumps`).
 
-Create row sets for populate database tables. Row sets is PHP file that returned array in format `table => rows`.
+Create row sets for populate database tables. Row sets is PHP file that return array in format `table => rows`.
 For example:
 
 ```php
@@ -76,7 +76,7 @@ return [
 ];
 ```
 
-You can get such a file structure:
+You can get structure, similar to this:
 
 ```
 tests/
