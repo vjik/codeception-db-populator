@@ -18,11 +18,11 @@
         "php": "^7.4|^8.0",
         "ext-pdo": "*",
         "codeception/codeception": "^4.1",
-        "codeception/module-db": "^1.1"
+        "codeception/module-db": "^1.1|^2.0"
     },
     "require-dev": {
-        "vimeo/psalm": "^4.10",
-        "vlucas/phpdotenv": "^5.3"
+        "vimeo/psalm": "^4.16",
+        "vlucas/phpdotenv": "^5.4"
     },
     "autoload": {
         "psr-4": {

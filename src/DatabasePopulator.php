@@ -22,7 +22,6 @@ final class DatabasePopulator
     public function __construct(Db $db, Config $config)
     {
         $this->dbDriver = $db->_getDriver();
-        /** @var PDO */
         $this->dbh = $db->_getDbh();
         $this->config = $config;
     }
@@ -118,6 +117,8 @@ final class DatabasePopulator
     /**
      * @see Db::readSqlFile
      * @see Db::readSql
+     *
+     * @return string[]
      */
     private function readDump(string $dump): array
     {
