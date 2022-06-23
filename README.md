@@ -15,9 +15,9 @@ So for a test you could load only needed tables or rows. As a result it dramatic
 
 ## Requirements
 
-- PHP 7.4 or higher.
-- Codeception 4.1 or higher.
-- Codeception Module DB 1.1 or higher.
+- PHP 8.0 or higher.
+- Codeception 5.0 or higher.
+- Codeception Module DB 3.0 or higher.
 
 ## Installation
 
