@@ -1,6 +1,6 @@
 # Database Populator for Codeception DB Module Change Log
 
-## 1.1.0 under development
+## 1.1.0 August 4, 2022
 
 - Enh: Raise minimum required versions: PHP to `^8.0`, `codeception/codeception` to `^5.0` and
   `codeception/module-db` to `^3.0`.
