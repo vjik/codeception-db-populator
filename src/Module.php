@@ -21,7 +21,7 @@ final class Module extends \Codeception\Module
      * @psalm-suppress InvalidPropertyAssignmentValue
      * @psalm-var ModuleConfigArray
      */
-    protected $config = [
+    protected array $config = [
         'preloadDump' => null,
         'preloadRows' => null,
     ];
@@ -30,14 +30,14 @@ final class Module extends \Codeception\Module
      * @psalm-suppress NonInvariantDocblockPropertyType
      * @var string[]
      */
-    protected $requiredFields = [
+    protected array $requiredFields = [
         'dumpsPath',
         'rowsPath',
     ];
 
     private ?DatabasePopulator $popualtor = null;
 
-    public function _beforeSuite($settings = []): void
+    public function _beforeSuite(array $settings = []): void
     {
         if ($this->config['preloadDump'] !== null) {
             $dumps = is_array($this->config['preloadDump'])
