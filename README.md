@@ -24,7 +24,7 @@ So for a test you could load only needed tables or rows. As a result it dramatic
 The package could be installed with [composer](https://getcomposer.org/download/):
 
 ```shell
-composer require vjik/codeception-db-populator --dev --prefer-dist
+composer require vjik/codeception-db-populator --dev
 ```
 ## General usage
 
