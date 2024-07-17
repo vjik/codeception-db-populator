@@ -21,7 +21,7 @@
         "codeception/module-db": "^3.0"
     },
     "require-dev": {
-        "vimeo/psalm": "^4.16",
+        "vimeo/psalm": "^5.25",
         "vlucas/phpdotenv": "^5.4"
     },
     "autoload": {
