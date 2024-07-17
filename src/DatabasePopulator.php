@@ -75,8 +75,15 @@ final class DatabasePopulator
         }
 
         foreach ($requests as $request) {
-            $columns = array_map(static fn ($c) => "`$c`", $request['columns']);
-            $sql = 'INSERT INTO ' . $table . ' (' . implode(',', $columns) . ') VALUES ';
+            $columns = array_map(
+                fn($c) => $this->dbDriver->getQuotedName($c),
+                $request['columns']
+            );
+            $sql = sprintf(
+                'INSERT INTO %s (%s) VALUES ',
+                $this->dbDriver->getQuotedName($table),
+                implode(',', $columns),
+            );
 
             $insertQuery = [];
             $insertData = [];
