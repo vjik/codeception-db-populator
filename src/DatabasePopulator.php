@@ -44,7 +44,7 @@ final class DatabasePopulator
         foreach ($sets as $set) {
             /**
              * @psalm-suppress UnresolvableInclude
-             * @psalm-var array<string, array<string,array>> $data
+             * @psalm-var array<string, list<array<string, mixed>>> $data
              */
             $data = require $this->getRowsFilePath($set);
             foreach ($data as $table => $rows) {
@@ -57,6 +57,7 @@ final class DatabasePopulator
 
     /**
      * @param array[] $rows
+     * @psalm-param list<array<string,mixed>> $rows
      */
     private function insertRows(string $table, array $rows): void
     {
