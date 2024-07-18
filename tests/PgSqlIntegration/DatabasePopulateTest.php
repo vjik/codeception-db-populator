@@ -44,7 +44,7 @@ final class DatabasePopulateTest extends Unit
 
         /** @var PDO $pdo */
         $pdo = $this->getModule('Db')->_getDbh();
-        $tableNames = $pdo->query('SHOW TABLES')->fetchAll(PDO::FETCH_COLUMN);
+        $tableNames = $pdo->query('SELECT table_name FROM information_schema.tables WHERE table_schema=\'public\' AND table_type=\'BASE TABLE\'')->fetchAll(PDO::FETCH_COLUMN);
 
         $this->assertSame([], $tableNames);
     }
