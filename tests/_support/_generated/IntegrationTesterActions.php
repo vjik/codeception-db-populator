@@ -1,4 +1,4 @@
-<?php  //[STAMP] c24edd3767fa499960577b11b53d2923
+<?php  //[STAMP] 4e578d7ff55748495388fac7d7ae2140
 // phpcs:ignoreFile
 namespace Vjik\Codeception\DatabasePopulator\Tests\_generated;
 
