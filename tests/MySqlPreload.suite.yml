@@ -1,5 +1,5 @@
-suite_namespace: Vjik\Codeception\DatabasePopulator\Tests\Preload
-actor: PreloadTester
+suite_namespace: Vjik\Codeception\DatabasePopulator\Tests\MySqlPreload
+actor: MySqlPreloadTester
 modules:
   enabled:
     - Db:

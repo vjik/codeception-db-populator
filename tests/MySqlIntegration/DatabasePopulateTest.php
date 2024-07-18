@@ -2,19 +2,19 @@
 
 declare(strict_types=1);
 
-namespace Vjik\Codeception\DatabasePopulator\Tests\Integration;
+namespace Vjik\Codeception\DatabasePopulator\Tests\MySqlIntegration;
 
 use Codeception\Exception\ModuleException;
 use Codeception\Test\Unit;
 use PDO;
-use Vjik\Codeception\DatabasePopulator\Tests\IntegrationTester;
+use Vjik\Codeception\DatabasePopulator\Tests\MySqlIntegrationTester;
 
 use function dirname;
 
 final class DatabasePopulateTest extends Unit
 {
     /**
-     * @var IntegrationTester
+     * @var MySqlIntegrationTester
      */
     protected $tester;
 

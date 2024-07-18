@@ -1,5 +1,5 @@
-suite_namespace: Vjik\Codeception\DatabasePopulator\Tests\Integration
-actor: IntegrationTester
+suite_namespace: Vjik\Codeception\DatabasePopulator\Tests\MySqlIntegration
+actor: MySqlIntegrationTester
 modules:
   enabled:
     - Db:

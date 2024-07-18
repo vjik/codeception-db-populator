@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-namespace Vjik\Codeception\DatabasePopulator\Tests\Preload;
+namespace Vjik\Codeception\DatabasePopulator\Tests\MySqlPreload;
 
 use Codeception\Test\Unit;
-use Vjik\Codeception\DatabasePopulator\Tests\PreloadTester;
+use Vjik\Codeception\DatabasePopulator\Tests\MySqlPreloadTester;
 
 final class PreloadTest extends Unit
 {
     /**
-     * @var PreloadTester
+     * @var MySqlPreloadTester
      */
     protected $tester;
 
