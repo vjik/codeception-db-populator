@@ -1,0 +1,11 @@
+suite_namespace: Vjik\Codeception\DatabasePopulator\Tests\PgSqlIntegration
+actor: PgSqlIntegrationTester
+modules:
+  enabled:
+    - Db:
+        dsn: 'pgsql:host=%DB_HOST%;dbname=%DB_NAME%'
+        user: '%DB_USERNAME%'
+        password: '%DB_PASSWORD%'
+    - Vjik\Codeception\DatabasePopulator\Module:
+        dumpsPath: 'tests/_data/dumps/pgsql'
+        rowsPath: 'tests/_data/rows'

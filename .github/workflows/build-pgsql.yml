@@ -1,0 +1,64 @@
+on:
+  pull_request:
+  push:
+    branches: [ 'master' ]
+
+name: PgSQL build
+
+jobs:
+  tests:
+    name: PHP ${{ matrix.php }}-${{ matrix.os }}
+
+    env:
+      key: cache-v1
+
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      matrix:
+        os:
+          - ubuntu-latest
+
+        php:
+          - "8.0"
+          - "8.1"
+          - "8.2"
+          - "8.3"
+
+        pgsql:
+          - 16
+
+    services:
+      postgres:
+        image: postgres:${{ matrix.pgsql }}
+        env:
+          POSTGRES_USER: root
+          POSTGRES_PASSWORD: root
+          POSTGRES_DB: db_test
+        ports:
+          - 5432:5432
+        options: --name=postgres --health-cmd="pg_isready" --health-interval=10s --health-timeout=5s --health-retries=3
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Install PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php }}
+          ini-values: date.timezone='UTC'
+          coverage: pcov
+          tools: composer:v2
+
+      - name: Install Composer dependencies
+        uses: ramsey/composer-install@v3
+
+      - name: Run unit tests
+        run: vendor/bin/codecept run Unit
+
+      - name: Run integration tests
+        run: vendor/bin/codecept run PgSqlIntegration
+
+      - name: Run preload tests
+        run: vendor/bin/codecept run PgSqlPreload

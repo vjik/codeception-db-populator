@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-namespace Vjik\Codeception\DatabasePopulator\Tests\Preload;
+namespace Vjik\Codeception\DatabasePopulator\Tests\PgSqlPreload;
 
 use Codeception\Test\Unit;
-use Vjik\Codeception\DatabasePopulator\Tests\PreloadTester;
+use Vjik\Codeception\DatabasePopulator\Tests\PgSqlPreloadTester;
 
 final class PreloadTest extends Unit
 {
     /**
-     * @var PreloadTester
+     * @var PgSqlPreloadTester
      */
     protected $tester;
 

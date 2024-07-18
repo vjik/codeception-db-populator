@@ -2,19 +2,19 @@
 
 declare(strict_types=1);
 
-namespace Vjik\Codeception\DatabasePopulator\Tests\Integration;
+namespace Vjik\Codeception\DatabasePopulator\Tests\PgSqlIntegration;
 
 use Codeception\Exception\ModuleException;
 use Codeception\Test\Unit;
 use PDO;
-use Vjik\Codeception\DatabasePopulator\Tests\IntegrationTester;
+use Vjik\Codeception\DatabasePopulator\Tests\PgSqlIntegrationTester;
 
 use function dirname;
 
 final class DatabasePopulateTest extends Unit
 {
     /**
-     * @var IntegrationTester
+     * @var PgSqlIntegrationTester
      */
     protected $tester;
 
@@ -32,7 +32,7 @@ final class DatabasePopulateTest extends Unit
         $this->expectException(ModuleException::class);
         $this->expectExceptionMessage(
             "\nFile with dump doesn't exist.\nPlease, check path for SQL-file: " .
-            dirname(__DIR__) . '/_data/dumps/shop.sql'
+            dirname(__DIR__) . '/_data/dumps/pgsql/shop.sql'
         );
         $this->tester->loadDump('shop');
     }
@@ -44,7 +44,7 @@ final class DatabasePopulateTest extends Unit
 
         /** @var PDO $pdo */
         $pdo = $this->getModule('Db')->_getDbh();
-        $tableNames = $pdo->query('SHOW TABLES')->fetchAll(PDO::FETCH_COLUMN);
+        $tableNames = $pdo->query('SELECT table_name FROM information_schema.tables WHERE table_schema=\'public\' AND table_type=\'BASE TABLE\'')->fetchAll(PDO::FETCH_COLUMN);
 
         $this->assertSame([], $tableNames);
     }

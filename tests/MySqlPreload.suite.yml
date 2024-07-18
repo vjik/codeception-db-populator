@@ -1,5 +1,5 @@
-suite_namespace: Vjik\Codeception\DatabasePopulator\Tests\Integration
-actor: IntegrationTester
+suite_namespace: Vjik\Codeception\DatabasePopulator\Tests\MySqlPreload
+actor: MySqlPreloadTester
 modules:
   enabled:
     - Db:
@@ -7,5 +7,7 @@ modules:
         user: '%DB_USERNAME%'
         password: '%DB_PASSWORD%'
     - Vjik\Codeception\DatabasePopulator\Module:
-        dumpsPath: 'tests/_data/dumps'
+        dumpsPath: 'tests/_data/dumps/mysql'
         rowsPath: 'tests/_data/rows'
+        preloadDump: 'blog'
+        preloadRows: 'authors'

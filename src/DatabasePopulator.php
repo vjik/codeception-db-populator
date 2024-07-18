@@ -44,7 +44,7 @@ final class DatabasePopulator
         foreach ($sets as $set) {
             /**
              * @psalm-suppress UnresolvableInclude
-             * @psalm-var array<string, array<string,array>> $data
+             * @psalm-var array<string, list<array<string, mixed>>> $data
              */
             $data = require $this->getRowsFilePath($set);
             foreach ($data as $table => $rows) {
@@ -57,6 +57,7 @@ final class DatabasePopulator
 
     /**
      * @param array[] $rows
+     * @psalm-param list<array<string,mixed>> $rows
      */
     private function insertRows(string $table, array $rows): void
     {
@@ -75,8 +76,15 @@ final class DatabasePopulator
         }
 
         foreach ($requests as $request) {
-            $columns = array_map(static fn ($c) => "`$c`", $request['columns']);
-            $sql = 'INSERT INTO ' . $table . ' (' . implode(',', $columns) . ') VALUES ';
+            $columns = array_map(
+                fn($c) => $this->dbDriver->getQuotedName($c),
+                $request['columns']
+            );
+            $sql = sprintf(
+                'INSERT INTO %s (%s) VALUES ',
+                $this->dbDriver->getQuotedName($table),
+                implode(',', $columns),
+            );
 
             $insertQuery = [];
             $insertData = [];
