@@ -7,7 +7,7 @@ modules:
         user: '%DB_USERNAME%'
         password: '%DB_PASSWORD%'
     - Vjik\Codeception\DatabasePopulator\Module:
-        dumpsPath: 'tests/_data/dumps'
+        dumpsPath: 'tests/_data/dumps/pgsql'
         rowsPath: 'tests/_data/rows'
         preloadDump: 'blog'
         preloadRows: 'authors'

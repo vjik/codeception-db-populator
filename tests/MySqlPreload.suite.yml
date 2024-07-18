@@ -1,0 +1,13 @@
+suite_namespace: Vjik\Codeception\DatabasePopulator\Tests\Preload
+actor: PreloadTester
+modules:
+  enabled:
+    - Db:
+        dsn: 'mysql:host=%DB_HOST%;dbname=%DB_NAME%'
+        user: '%DB_USERNAME%'
+        password: '%DB_PASSWORD%'
+    - Vjik\Codeception\DatabasePopulator\Module:
+        dumpsPath: 'tests/_data/dumps/mysql'
+        rowsPath: 'tests/_data/rows'
+        preloadDump: 'blog'
+        preloadRows: 'authors'

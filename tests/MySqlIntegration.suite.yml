@@ -7,5 +7,5 @@ modules:
         user: '%DB_USERNAME%'
         password: '%DB_PASSWORD%'
     - Vjik\Codeception\DatabasePopulator\Module:
-        dumpsPath: 'tests/_data/dumps'
+        dumpsPath: 'tests/_data/dumps/mysql'
         rowsPath: 'tests/_data/rows'
