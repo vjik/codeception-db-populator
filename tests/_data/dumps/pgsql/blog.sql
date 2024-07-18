@@ -160,3 +160,4 @@ ALTER TABLE ONLY public.post
 -- PostgreSQL database dump complete
 --
 
+SET search_path TO public
