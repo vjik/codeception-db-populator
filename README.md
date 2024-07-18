@@ -4,12 +4,12 @@
     <br>
 </p>
 
-[![Latest Stable Version](http://poser.pugx.org/vjik/codeception-db-populator/v)](https://packagist.org/packages/vjik/codeception-db-populator)
-[![Total Downloads](http://poser.pugx.org/vjik/codeception-db-populator/downloads)](https://packagist.org/packages/vjik/codeception-db-populator)
+[![Latest Stable Version](https://poser.pugx.org/vjik/codeception-db-populator/v)](https://packagist.org/packages/vjik/codeception-db-populator)
+[![Total Downloads](https://poser.pugx.org/vjik/codeception-db-populator/downloads)](https://packagist.org/packages/vjik/codeception-db-populator)
 [![MySQL build](https://github.com/vjik/codeception-db-populator/actions/workflows/build-mysql.yml/badge.svg)](https://github.com/vjik/codeception-db-populator/actions/workflows/build-mysql.yml)
 [![PgSQL build](https://github.com/vjik/codeception-db-populator/actions/workflows/build-pgsql.yml/badge.svg)](https://github.com/vjik/codeception-db-populator/actions/workflows/build-pgsql.yml)
 [![static analysis](https://github.com/vjik/codeception-db-populator/actions/workflows/static.yml/badge.svg)](https://github.com/vjik/codeception-db-populator/actions/workflows/static.yml)
-[![License](http://poser.pugx.org/vjik/codeception-db-populator/license)](/LICENSE)
+[![License](https://poser.pugx.org/vjik/codeception-db-populator/license)](/LICENSE)
 
 [Codeception](https://codeception.com/) DB module addon that helps you to tune database populations. 
 So for a test you could load only needed tables or rows. As a result it dramatically reduces the total execution time.
