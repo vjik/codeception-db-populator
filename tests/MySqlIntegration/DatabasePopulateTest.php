@@ -32,7 +32,7 @@ final class DatabasePopulateTest extends Unit
         $this->expectException(ModuleException::class);
         $this->expectExceptionMessage(
             "\nFile with dump doesn't exist.\nPlease, check path for SQL-file: " .
-            dirname(__DIR__) . '/_data/dumps/shop.sql'
+            dirname(__DIR__) . '/_data/dumps/mysql/shop.sql'
         );
         $this->tester->loadDump('shop');
     }
