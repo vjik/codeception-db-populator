@@ -3,7 +3,7 @@ on:
   push:
     branches: [ 'master' ]
 
-name: MySQL build
+name: PgSQL build
 
 jobs:
   tests:
