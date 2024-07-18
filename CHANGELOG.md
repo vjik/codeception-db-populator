@@ -1,6 +1,6 @@
 # Database Populator for Codeception DB Module Change Log
 
-## 1.1.1 under development
+## 1.1.1 July 18, 2024
 
 - Bug #5: Fix column and table names quotation.
 
