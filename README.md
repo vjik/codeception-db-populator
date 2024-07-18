@@ -4,11 +4,12 @@
     <br>
 </p>
 
-[![Latest Stable Version](https://poser.pugx.org/vjik/codeception-db-populator/v/stable.png)](https://packagist.org/packages/vjik/codeception-db-populator)
-[![Total Downloads](https://poser.pugx.org/vjik/codeception-db-populator/downloads.png)](https://packagist.org/packages/vjik/codeception-db-populator)
-[![Build status](https://github.com/vjik/codeception-db-populator/workflows/build/badge.svg)](https://github.com/vjik/codeception-db-populator/actions?query=workflow%3Abuild)
-[![static analysis](https://github.com/vjik/codeception-db-populator/workflows/static%20analysis/badge.svg)](https://github.com/vjik/codeception-db-populator/actions?query=workflow%3A%22static+analysis%22)
-[![License](https://poser.pugx.org/vjik/codeception-db-populator/license)](/LICENSE)
+[![Latest Stable Version](http://poser.pugx.org/vjik/codeception-db-populator/v)](https://packagist.org/packages/vjik/codeception-db-populator)
+[![Total Downloads](http://poser.pugx.org/vjik/codeception-db-populator/downloads)](https://packagist.org/packages/vjik/codeception-db-populator)
+[![MySQL build](https://github.com/vjik/codeception-db-populator/actions/workflows/build-mysql.yml/badge.svg)](https://github.com/vjik/codeception-db-populator/actions/workflows/build-mysql.yml)
+[![PgSQL build](https://github.com/vjik/codeception-db-populator/actions/workflows/build-pgsql.yml/badge.svg)](https://github.com/vjik/codeception-db-populator/actions/workflows/build-pgsql.yml)
+[![static analysis](https://github.com/vjik/codeception-db-populator/actions/workflows/static.yml/badge.svg)](https://github.com/vjik/codeception-db-populator/actions/workflows/static.yml)
+[![License](http://poser.pugx.org/vjik/codeception-db-populator/license)](/LICENSE)
 
 [Codeception](https://codeception.com/) DB module addon that helps you to tune database populations. 
 So for a test you could load only needed tables or rows. As a result it dramatically reduces the total execution time.
